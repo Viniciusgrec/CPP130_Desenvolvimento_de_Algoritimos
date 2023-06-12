@@ -1,0 +1,41 @@
+// Leia 2 valores reais (x e y), que devem representar as coordenadas de um ponto em um plano.
+//Então, determine a que quadrante (Q1, Q2, Q3, Q4) o ponto pertence ou se está sobre um dos eixos cartesianos ou na origem (x=y=0).
+
+#include <stdio.h>
+
+float x, y;
+
+int main(void) {
+
+	scanf("%f", &x);
+	scanf("%f", &y);
+
+	if (x > 0 && y > 0){
+		printf("Está no 1° quadrante!");
+	}
+
+		else if (x < 0 && y > 0){
+		printf("Está no 2° quadrante!");
+	}
+
+		else if (x < 0 && y < 0){
+		printf("Está no 3° quadrante!");
+	}
+
+		else if (x > 0 && y < 0){
+		printf("Está no 4° quadrante!");
+	}
+
+		else if (x == 0 && y != 0){
+		printf("Está no eixo x!");
+	}
+			
+		else if (x != 0 && y == 0){
+		printf("Está no eixo y!");
+	}
+
+			else {
+		printf("Está na origem!");
+	}
+  return 0;
+}
